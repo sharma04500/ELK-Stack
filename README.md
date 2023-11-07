@@ -39,8 +39,7 @@ search using respective queries, which displays it through a dashboard.
 ## Beats
 
 > #### ***Why Beats??***
-***During the initial years of introducing ELK stack to the market, Most of the users found logstash heavy and resource ***
-***consuming. So, the company then introduced the concept of Beats. Beats are the fourth component added to the ELK stack***
+***During the initial years of introducing ELK stack to the market, Most of the users found logstash heavy and resource consuming. So, the company then introduced the concept of Beats. Beats are the fourth component added to the ELK stack***
 
 Beats are the light weight data shippers which pulls resource-specific data and ships it to the logstash or directly 
 to the elastic search. In case of beats, instead of packing all the abilities to pull various types of data from a server
@@ -71,4 +70,4 @@ Types of Beats available are: <br>
          elasticsearch. <br>
 
 ## APM using ELK
-    APM stands for Application Performance Monitoring.
+APM stands for Application Performance Monitoring.
