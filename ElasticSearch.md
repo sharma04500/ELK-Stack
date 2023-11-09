@@ -53,6 +53,14 @@ discovery.seed_hosts: ["192.168.1.10:9300", "192.168.1.11", "seeds.mydomain.com"
 
 ```
 
+#### Using Environment Variables
+
+Elasticsearch.yml file supports usage of environment variables and to call them in the file just use ${}. <br>
+For example to specify the node name, we can set an env using `export HOST="172.25.16.30,172.25.16.32"`. This will set an environment variable HOST with the value "172.25.16.30,172.25.16.32". The config file reads this value as two different IP addresses and will process the variable two times for the two IP addresses specified using comma(,).
+
+To call the environment variable in the file, mention it as `${HOST}`. 
+
+
 
 
 
