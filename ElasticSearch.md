@@ -6,6 +6,8 @@ Beats or Logstash will feed the data into elasticsearch. Kibana will pull the da
 
 ### Installing ElasticSearch:
 
+Elasticsearch was purely built on Java and comes with the required java modules bundled along with the downloaded elasticsearch installation package. We need not to install java for using elasticsearch.
+
 To install elasticsearch, first setup the repository of elastic with the aid of the PGP key and add this repository definition to the apt sources list through executing the following commands:
 
 ```
@@ -46,8 +48,7 @@ discovery.seed_hosts:
    - 192.168.1.11
    - seeds.mydomain.com
 
-# or
-
+# or like list of Strings :
 discovery.seed_hosts: ["192.168.1.10:9300", "192.168.1.11", "seeds.mydomain.com"]
 
 ```
