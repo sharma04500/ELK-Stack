@@ -20,6 +20,8 @@ echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://arti
 apt update && apt install elasticsearch -y
 
 ```
+On Installation, Elasticsearch is neither started nor enabled by default. We have to run the elasticsearch after installing. The package itself will also create the systemd module after installation. 
+We have to configure the elaticsearch with respect to our requirements through making necessary modifications to the configuration file `/etc/elasticsearch/elasticsearch.yml` as mentioned below.
 
 Logstash, Kibana and beats can also be installed from the same repository as elastic updates their latest release information through this official repository.
 
@@ -78,9 +80,23 @@ Like anyother Databases available in the market, ElasticSearch also supports the
 
 Though the concept of Replicas and shards is unique, the purpose of both is same i.e., to enable the elasticsearch to process the queries.
 
+#### elastic user
 
+After installing the elsatic search, the installation notices, will contain a password for super user as shown below:
 
+```
+The generated password for the elastic built-in superuser is : RzhMmjK1vNWVTCoOl7IE
+```
 
+By default, an user with id `elastic` will be created with all the privileges and the elastic user is called a super user.
+In case of missing this output or losing the password, we can reset the password of the elastic user through executing the following command.
 
+```
+/usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic
 
-Reference: https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html
+# To reset the password of any other user, execute:
+
+/usr/share/elasticsearch/bin/elasticsearch-reset-password -u <username>
+```
+
+Reference: https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html
