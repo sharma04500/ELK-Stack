@@ -6,7 +6,7 @@
 performance of the VM's and containers. The three components of the ELK stack have their own significance as  
 mentioned below.
 
-E - Elasticsearch   ***Database***
+E - Elasticsearch   ***Database*** <br>
 L - LogStash        ***Collects Data***
 K - Kibana          ***Visualises the data***
 
