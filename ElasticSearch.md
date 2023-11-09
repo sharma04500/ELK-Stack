@@ -40,6 +40,8 @@ Instead of doing this, we can also specify IP addresses of the machines, which i
 
 #### Modification of discovery section for cluster formation
 
+Seed host discovery refers to an auto-clustering mechanism in Elasticsearch. While setting up an elasticsearch cluster, if we describe all the nodes which belong to the cluster in this section through mentioning the ip address or an ip address with port or a domain name whose endpoint is another node carrying elaticsearch, as shown below. Elasticsearch has the capability to automatically spin up a cluster using the provided hosts and auto elects the master node as well.
+
 The other nodes on which elasticsearch is running are specified as seed hosts under discovery section. Here, the hosts can be specified as values in yaml format directly or as a list of strings, as shown below:
 
 ```
@@ -60,10 +62,21 @@ For example to specify the node name, we can set an env using `export HOST="172.
 
 To call the environment variable in the file, mention it as `${HOST}`. 
 
+For example: 
+```
+node.name: ${HOSTNAME}
+```
+#### Shards and Replicas
 
+Like anyother Databases available in the market, ElasticSearch also supports the concept of Shards and Replicas. The fundamental difference between the shards and replicas is shards are the partitions of the entire Database and Replica is a cloned copy of the entire DB.
 
+> Shards
+>> In case of Shards, the entire Database is divided into multiple parts and each shard will hold a partition of the data. In case of RDB's, Shards usually hold few columns of the entire DB. Sharding lets the elasticsearch to process the queries much faster when compared to a standalone Database. If any of the shards go down, the queries being processed will be affected and the outputs contain partial data, due to unavailability of a part of the database.
 
+> Replicas
+>> In case of Replicas, each replica holds the copy of the entire Database. The incomming queries will shared among the replicas and master node for processing. If a replica goes down, the query processing will slow down. But, the data which is being provided will be complete.
 
+Though the concept of Replicas and shards is unique, the purpose of both is same i.e., to enable the elasticsearch to process the queries.
 
 
 
