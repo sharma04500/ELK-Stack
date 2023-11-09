@@ -99,4 +99,5 @@ In case of missing this output or losing the password, we can reset the password
 /usr/share/elasticsearch/bin/elasticsearch-reset-password -u <username>
 ```
 
+
 Reference: https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html
