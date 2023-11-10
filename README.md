@@ -10,6 +10,8 @@ E - Elasticsearch   ***Database***
 L - LogStash        ***Collects Data***
 K - Kibana          ***Visualises the data***
 
+![elkstack!]("elkstack.png")
+
 ## Elastic Search
 
 Elastic search is the heart of the ELK, which stores all the data in NOSQL format. It uses json doccuments to
