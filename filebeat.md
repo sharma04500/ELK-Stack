@@ -6,7 +6,7 @@ Beats are installed on the *application servers* and are directly configured to 
 
 
 
-![filebeat!]("filebeat.png")
+![filebeat!](filebeat.png)
 
 #### Installation
 Beats can be installed from the elatic repository from which we've installed the elasticsearch and kibana. Usually, to install a file beat on any application server, first set up the repository for the 
