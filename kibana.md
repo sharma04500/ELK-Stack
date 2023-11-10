@@ -41,4 +41,17 @@ The credentials for this user can be found at the bottom most lines of the kiban
 elasticsearch.username: kibana_system
 elasticsearch.password: m=kvZCyod*JtaJYvPK9Y
 ```
-**NOTE:** These credentials are unique for every installation.
+**NOTE:** *These credentials are unique for every installation.*
+
+Once, after starting elasticsearch and kibana using systemctl, access the IP of the instance via 5601 port via browser to configure Kibana.
+`http://localhost:5601`
+
+To generate an enrollment token for kibana, execute the following command in the CLI:
+```
+/usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
+```
+Now, the dashboard will prompt for the kibana verification code, which you can get through executing the following command in the Kibana instance *(for linux machines only)* or `systemctl status kibana` also pops up the verification code to be entered in the dashboard for configuring the dashboard with server.
+
+```
+/usr/share/kibana/bin/kibana-verification-code
+```
