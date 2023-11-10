@@ -6,9 +6,9 @@ ELK stack represents three products of 'elastic', which are generally used in co
 performance of the VM's and containers. The three components of the ELK stack have their own significance as  
 mentioned below.
 
-E - Elasticsearch   ***Database***  <br>
-L - LogStash        ***Collects Data***  <br>
-K - Kibana          ***Visualises the data*** <br>
+E - Elasticsearch       ***Database***  <br>
+L - LogStash            ***Collects Data***  <br>
+K - Kibana              ***Visualises the data*** <br>
 
 ![elkstack!](elkstack.png)
 
