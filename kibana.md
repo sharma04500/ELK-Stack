@@ -55,3 +55,7 @@ Now, the dashboard will prompt for the kibana verification code, which you can g
 ```
 /usr/share/kibana/bin/kibana-verification-code
 ```
+
+#### elastic user
+
+After completing the above mentioned configuration, the system will prompt for user credentials in order to login to the dashboard. By default elastic stack comes with few predefined system users. `elatic` is one of such user. elastic user comes with a randomly-generated password and all the privileges. To reset the password of a user
