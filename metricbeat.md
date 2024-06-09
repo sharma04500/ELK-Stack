@@ -1,7 +1,7 @@
 #  Metric Beat
 Metric beat is used to push the resource metrics of the application server into the elaticsearch. 
 
-In short, what metric beat does is, it collects the specified metric data and pushes it into the elasticsearch and Kibana visualizes the data from the elasticsearch.
+In short, what metric beat does is, it collects the specified metrics data and pushes it into the elasticsearch and Kibana visualizes the data from the elasticsearch.
 
 ```
 # PGP key for the elastic repository:
@@ -18,3 +18,11 @@ By default, the metric beat will be in stopped status on installation, but the p
 Before manually starting the metric beat, we should properly configure it in order to establish the communication in between beat and elaticsearch or logstash.
 
 The configuration file lies in the path: `/etc/metricbeat/metricbeat.yml` 
+
+### Default Directory Paths:
+1. home - /usr/share/metricbeat
+2. binaries - /usr/share/metricbeat/bin
+3. configuartion - /etc/metricbeat
+4. logs - /var/log/metricbeat
+5. data -  /var/lib/metricbeat 
+
